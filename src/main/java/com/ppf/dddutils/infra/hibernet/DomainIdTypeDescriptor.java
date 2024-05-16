@@ -24,7 +24,7 @@ public class DomainIdTypeDescriptor<ID extends DomainObjectId> extends AbstractT
      * @param type the ID type
      * @param factory a factory for creating nex ID instances
      */
-    protected DomainIdTypeDescriptor(@NotNull Class<ID> type, @NotNull Function<String,ID> factory) {
+    public DomainIdTypeDescriptor(@NotNull Class<ID> type, @NotNull Function<String,ID> factory) {
         super(type);
         this.factory = Objects.requireNonNull(factory, "factory must not be null");
     }
