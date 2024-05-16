@@ -1,5 +1,6 @@
 package com.ppf.dddutils.entity;
 
+import com.ppf.dddutils.Domain.DomainObjectId.DomainObjectId;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Version;
@@ -10,7 +11,7 @@ import java.io.Serializable;
 import java.util.Optional;
 
 @MappedSuperclass // <1>
-public abstract class BaseEntity<Id extends Serializable>  extends AbstractPersistable<Id>{ // <2>
+public abstract class BaseEntity<Id extends DomainObjectId>  extends AbstractPersistable<Id>{ // <2>
 
     @Version // <3>
     private Long version;
