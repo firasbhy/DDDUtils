@@ -1,5 +1,6 @@
 package com.ppf.dddutils.AggregateRoot;
 
+import com.ppf.dddutils.Domain.DomainObjectId.DomainObjectId;
 import com.ppf.dddutils.entity.BaseEntity;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Transient;
@@ -11,7 +12,7 @@ import java.io.Serializable;
 import java.util.*;
 
 @MappedSuperclass // <1>
-public abstract class BaseAggregateRoot<Id extends Serializable> extends BaseEntity<Id> {
+public abstract class BaseAggregateRoot<Id extends DomainObjectId> extends BaseEntity<Id> {
 
     private final @Transient List<Object> domainEvents = new ArrayList<>(); // <2>
 
