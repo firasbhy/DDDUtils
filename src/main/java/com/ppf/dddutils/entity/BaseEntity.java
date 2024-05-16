@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Optional;
 
 @MappedSuperclass // <1>
-public abstract class BaseEntity<Id extends Serializable> extends AbstractPersistable<Id> { // <2>
+public abstract class BaseEntity<Id extends Serializable>  extends AbstractPersistable<Id>{ // <2>
 
     @Version // <3>
     private Long version;
